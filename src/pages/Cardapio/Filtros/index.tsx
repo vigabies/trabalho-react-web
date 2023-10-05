@@ -1,24 +1,23 @@
-import styles from './Filtros.module.scss';
-import filtros from './filtros.json'
+import styles from "./Filtros.module.scss";
+import filtros from "./filtros.json";
 
-type Iopcao = typeof filtros[0];
+type IOpcao = typeof filtros[0];
+interface Props {
+  filtro: number | null;
+  setFiltro: React.Dispatch<React.SetStateAction<number | null>>;
+}
 
-/*
-interface Iopcao{
-    id: number;
-    label: string;
-}*/
-
-export default function Filtros(){
-    return(
-        <div className={styles.filtro}>
-            {filtros.map((opcao) => (
-                <button className={styles.filtro__filtro} key={opcao.id}>
-                    {opcao.label}
-                </button>
-            )
-
-            )}
-        </div>
-    );
+export default function Filtros({filtro, setFiltro}: Props) {
+  function selecionarFiltro(opcao: IOpcao) {
+      return setFiltro(opcao.id)
+  }
+  return (
+    <div className={styles.filtro}>
+      {filtros.map((opcao) => (
+        <button className={styles.filtro__filtro} key={opcao.id}>
+          {opcao.label}
+        </button>
+      ))}
+    </div>
+  );
 }

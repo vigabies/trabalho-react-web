@@ -3,10 +3,12 @@ import Logo from "assets/logo.png";
 import Buscador from "./Buscador";
 import { useState } from "react";
 import Filtros from "./Filtros";
-import Mario from "assets/mario.png";
+import Aviao from "assets/aviao.jpg";
 
 export function Cardapio() {
   const [busca, setBusca] = useState("");
+  const [filtro, setFiltro] = useState <number | null>(null);
+
   return (
     <main>
       <nav className={styles.menu}>
@@ -15,14 +17,13 @@ export function Cardapio() {
       </nav>
 
       <div className={styles.textos}>
-        <img src={Mario} alt="Mario" className={styles.img} />
+        <img src={Aviao} alt="Aviao" className={styles.img} />
         <div className={styles.text}>"Traveling is experiencing new cultures with an open mind"</div>
       </div>
 
       <section className={styles.cardapio}>
-        <h3 className={styles.cardapio__titulo}>Options</h3>
         <div className={styles.cardapio__filtros}>
-          <Filtros />
+          <Filtros filtro={filtro} setFiltro={setFiltro}/>
         </div>
       </section>
     </main>

@@ -18,30 +18,25 @@
 
 .img {
   display: flex;
-  width: 700px;
-  height: 400px;
-  margin-left: 55%;
-  position: absolute;
+  width: 600px;
+  height: 300px;
+  border-radius: 5%;
 }
 
 .textos {
+  width: 100%;
+  padding: 0 $padding-horizontal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 180px;
-}
-
-.text1 {
-  color: 	#B0C4DE;
-  font-size: 2rem;
-  min-width: 200px;
-  width: 40%;
-  padding-left: 260px;
-  margin-bottom: 10px;
 }
 
 .text {
   color: rgb(58, 49, 49);
   font-size: 4rem;
   min-width: 200px;
-  width: 40%;
+  width: 60%;
   padding-left: 260px;
 }
 
@@ -56,11 +51,7 @@
   @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
     padding: 50px $padding-horizontal-md;
   }
-  &__titulo {
-    color: rgb(0, 0, 0);
-    font-size: 2rem;
-    margin-bottom: 30px;
-  }
+  
   &__filtros {
     align-items: center;
     display: flex;
