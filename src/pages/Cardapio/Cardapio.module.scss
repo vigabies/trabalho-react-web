@@ -1,0 +1,72 @@
+@import "styles/variaveis";
+@import "styles/breakpoints";
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px $padding-horizontal;
+  @media (max-width: $desktop_xsm) {
+    padding: 20px $padding-horizontal-mobile;
+  }
+  @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+    padding: 20px $padding-horizontal-sm;
+  }
+  @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+    padding: 20px $padding-horizontal-md;
+  }
+}
+
+.img {
+  display: flex;
+  width: 700px;
+  height: 400px;
+  margin-left: 55%;
+  position: absolute;
+}
+
+.textos {
+  padding-top: 180px;
+}
+
+.text1 {
+  color: 	#B0C4DE;
+  font-size: 2rem;
+  min-width: 200px;
+  width: 40%;
+  padding-left: 260px;
+  margin-bottom: 10px;
+}
+
+.text {
+  color: rgb(58, 49, 49);
+  font-size: 4rem;
+  min-width: 200px;
+  width: 40%;
+  padding-left: 260px;
+}
+
+.cardapio {
+  padding: 50px $padding-horizontal;
+  @media (max-width: $desktop_xsm) {
+    padding: 50px $padding-horizontal-mobile;
+  }
+  @media (min-width: $desktop_xsm) and (max-width: $desktop_sm) {
+    padding: 50px $padding-horizontal-sm;
+  }
+  @media (min-width: $desktop_sm) and (max-width: $desktop_md) {
+    padding: 50px $padding-horizontal-md;
+  }
+  &__titulo {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  &__filtros {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}

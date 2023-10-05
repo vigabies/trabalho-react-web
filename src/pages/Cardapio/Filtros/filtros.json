@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "label": "Voo Direto." 
+    },
+    {
+        "id": 2,
+        "label": "Voo com Escala" 
+    },
+    {
+        "id": 3,
+        "label": "Voo com Conexão" 
+    }
+
+]
