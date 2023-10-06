@@ -7,7 +7,7 @@ import Aviao from "assets/aviao.jpg";
 
 export function Cardapio() {
   const [busca, setBusca] = useState("");
-  const [filtro, setFiltro] = useState <number | null>(null);
+  const [filtro, setFiltro] = useState<number | null>(null);
 
   return (
     <main>
@@ -16,14 +16,16 @@ export function Cardapio() {
         <Buscador busca={busca} setBusca={setBusca} />
       </nav>
 
-      <div className={styles.textos}>
-        <img src={Aviao} alt="Aviao" className={styles.img} />
-        <div className={styles.text}>"Traveling is experiencing new cultures with an open mind"</div>
-      </div>
-
       <section className={styles.cardapio}>
+        <div className={styles.cardapio__textos}>
+          <img src={Aviao} alt="Aviao" className={styles.cardapio__textos__img} />
+          <h1 className={styles.cardapio__textos__frase}>
+            Traveling is experiencing new cultures with an open mind!
+          </h1>
+        </div>
+
         <div className={styles.cardapio__filtros}>
-          <Filtros filtro={filtro} setFiltro={setFiltro}/>
+          <Filtros filtro={filtro} setFiltro={setFiltro} />
         </div>
       </section>
     </main>
